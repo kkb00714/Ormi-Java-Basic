@@ -1,4 +1,4 @@
-package chap02.casting;
+package chap02;
 
 public class Unboxing {
     public static void main(String[] args) {
