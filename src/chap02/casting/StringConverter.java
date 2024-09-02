@@ -25,5 +25,25 @@ public class StringConverter {
 
         Double doubleStr2 = Double.valueOf(str); // Double 객체 생성 - valueOf
         System.out.println(doubleStr2 + 0.2); // 12345.2
+
+        int a1 = 10;
+        String strA1;
+        strA1 = String.valueOf(a1);
+        System.out.println(strA1);
+
+        strA1 = Integer.toString(a1);
+        System.out.println(strA1);
+
+        strA1 = "" + a1; // 정수값에 빈 문자열을 더해 문자열 합치기
+        System.out.println(strA1);
+        
+        Object nullStr = null;
+        String stringStr;
+
+        stringStr = nullStr.toString(); // NPE 발생
+        System.out.println(stringStr);
+
+        stringStr = String.valueOf(nullStr); // 문자열 " null " 로 변환됨
+        System.out.println(stringStr);
     }
 }
