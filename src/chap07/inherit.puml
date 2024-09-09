@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Animal {
+    String name
+    void setName()
+    String getName()
+    void setWithGravity()
+    double getWithGravity()
+    void setNap()
+    String getNap()
+}
+
+class Tiger extends Animal
+
+class Rabbit extends Animal
+
+class Pig extends Animal
+
+
+@enduml
