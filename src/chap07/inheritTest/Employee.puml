@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Employee {
+    String name;
+    double calculateSalary()
+}
+
+class FullTimeEmployee extends Employee{
+    double salary
+    calculateSalary()
+}
+
+class PartTimeEmployee extends Employee {
+    double hourlyRate
+    int hoursWorked
+    calculateSalary()
+}
+
+
+
+
+@enduml
