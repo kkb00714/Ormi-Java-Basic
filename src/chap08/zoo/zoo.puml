@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Tiger() {
+}
+
+class Lion() {
+}
+
+class Zookeeper() {
+    void feed();
+}
+
+@enduml
