@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface Vehicle() {
+    void run();
+}
+
+class Bus implements Vehicle {
+    void run();
+}
+
+class Taxi implements Vehicle {
+    void run();
+}
+
+@enduml
