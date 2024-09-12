@@ -10,5 +10,8 @@ public class zoo {
 
         Tiger tiger = new Tiger();
         me.feed(tiger);
+
+        // 배열, 인터페이스(다형성)
+        Predator[] predators = {lion, tiger};
     }
 }
