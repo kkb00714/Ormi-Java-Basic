@@ -1,4 +1,4 @@
-package chap10.generic;
+package chap10;
 
 public class BoxGenericExample {
     public static void main(String[] args) {
@@ -15,15 +15,7 @@ public class BoxGenericExample {
         System.out.println(value2);
 
         Box<Double> box3 = new Box<>();
-        box3 = Util.boxing(13.24);
-        System.out.println(box3.get());
-
         Box<Boolean> box4 = new Box<>();
-        box4 = Util.boxing(true);
-        System.out.println(box4.get());
 
-        // 제네릭 메서드
-        Box<String> value = Util.boxing("문자열값");
-        String strValue = value.get();
     }
 }
