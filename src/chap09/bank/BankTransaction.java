@@ -13,6 +13,7 @@ public class BankTransaction {
             b.deposit(money); // B 계좌 입금
             a.withdraw(money); // A 계좌 출금 (예외 발생)
         } catch (BalanceInsufficientException e) {
+            // 만약 잔액보다 큰 금액을 송금 시도할 경우 트랜잭션 처리
             System.out.println(b.balance);
             b.depositRollback(money);
             System.out.println("송금 실패");
@@ -20,8 +21,5 @@ public class BankTransaction {
         System.out.println("송금 성공");
         System.out.println(b.balance);
 
-
-        
-        // 만약 잔액보다 큰 금액을 송금 시도할 경우 트랜잭션 처리
     }
 }
