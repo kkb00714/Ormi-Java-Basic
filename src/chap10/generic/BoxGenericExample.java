@@ -25,5 +25,6 @@ public class BoxGenericExample {
         // 제네릭 메서드
         Box<String> value = Util.boxing("문자열값");
         String strValue = value.get();
+        System.out.println(strValue);
     }
 }
