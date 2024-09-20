@@ -1,4 +1,4 @@
-package chap11;
+package chap11.list;
 
 import java.util.*;
 

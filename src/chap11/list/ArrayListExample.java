@@ -1,11 +1,11 @@
-package chap11;
+package chap11.list;
 
 import java.util.*;
 
-public class LinkedListExample {
+public class ArrayListExample {
     public static void main(String[] args) {
-        // LinkedList 값 추가
-        List<String> list = new LinkedList<>();   // 10개의 사이즈가 있는 배열을 선언
+        // ArrayList 값 추가
+        List<String> list = new ArrayList<>();   // 10개의 사이즈가 있는 배열을 선언
         list.add("Java");
         list.add("Spring");
         list.add("Python");
