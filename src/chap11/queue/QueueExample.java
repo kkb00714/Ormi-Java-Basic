@@ -5,18 +5,25 @@ import java.util.Queue;
 
 public class QueueExample {
     public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<>();
+        Queue<Message> messageQueue = new LinkedList<>();
 
-        queue.offer("문자열 1");
-        queue.offer("문자열 2");
-        queue.offer("문자열 3");
-        queue.offer("문자열 4");
+        messageQueue.offer(new Message("sendMail", "홍길동"));
+        messageQueue.offer(new Message("sendSms", "제니"));
+        messageQueue.offer(new Message("sendKakaoTalk", "리사"));
 
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        // 마지막 값을 출력될 값이 없기 때문에 null 반환
+        while (!messageQueue.isEmpty()) {        // 메시지 큐가 비었는지 확인
+            Message message = messageQueue.poll(); // 메시지 큐에서 하나의 메시지 꺼냄
+            switch (message.getCommand()) {
+                case "sendMail":
+                    System.out.println(message.getTo() + "에게 메일을 보냅니다.");
+                    break;
+                case "sendSms":
+                    System.out.println(message.getTo() + "에게 SMS를 보냅니다.");
+                    break;
+                case "sendKakaoTalk":
+                    System.out.println(message.getTo() + "에게 카톡을 보냅니다.");
+                    break;
+            }
+        }
     }
 }
