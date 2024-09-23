@@ -37,5 +37,6 @@ public class LambdaExample {
         
         // 매개변수가 있고 리턴값이 있는 람다식
 
+
     }
 }
