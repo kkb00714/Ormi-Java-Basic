@@ -33,5 +33,11 @@ public class LambdaExample2 {
         Predicate<Integer> even = (x) -> x % 2 == 0;
         System.out.println("짝수 체크: " + even.test(132445));
         System.out.println("짝수 체크: " + even.test(24));
+
+        // Predicate<String> isEmpty2 = (x) -> x.isEmpty();   // 메서드 참조형으로 변경한다면
+        // 클래스명::메서드명 으로 면경 가능
+        Predicate<String> isEmpty2 = String::isEmpty;   // 다만 해석이 복잡해질 수 있다.
+
+
     }
 }
