@@ -7,19 +7,21 @@ public class BankTransaction {
         Account b = new Account(0);
 
         // A -> B 10만원 송금
-        int money = 100_000;
+        int money = 10_000;
         try {
             // A 계좌 출금에 실패했을 때, B 계좌에 입금된 금액 차감 (롤백)
+            a.withdraw(money); // A 계좌 출금 (예외 발생)!
             b.deposit(money); // B 계좌 입금
-            a.withdraw(money); // A 계좌 출금 (예외 발생)
+            System.out.println("송금 성공");
+            System.out.println("출금 계좌 A: "+ a.balance);
+            System.out.println("입금 계좌 B: " + b.balance);
         } catch (BalanceInsufficientException e) {
             // 만약 잔액보다 큰 금액을 송금 시도할 경우 트랜잭션 처리
-            System.out.println(b.balance);
-            b.depositRollback(money);
+//            System.out.println(b.balance);
+//            b.depositRollback(money);
             System.out.println("송금 실패");
         }
-        System.out.println("송금 성공");
-        System.out.println(b.balance);
+
 
     }
 }
