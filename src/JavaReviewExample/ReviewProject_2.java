@@ -18,7 +18,7 @@ public class ReviewProject_2 {
         // ArrayList는 그냥 print해도 나온다.
         // 순서가 있고 중복제거는 되지 않는다.
 
-
+        // 문제 1 - 학생 성적 구하기 (ReviewProject2_TestExample에 풀이)
 
     }
 }
